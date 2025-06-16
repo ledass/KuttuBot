@@ -142,7 +142,7 @@ This module only works for my admins.
 
     CUSTOM_FILE_CAPTION = """<b>📁 Fɪʟᴇ Nᴀᴍᴇ: 📄 <code>{file_name}</code>
 
-📦 Fɪʟᴇ Sɪᴢᴇ: 💾 <code>{file_size}</code>
+📦 Fɪʟᴇ Sɪᴢᴇ: 💾 <code>{file_size}</code>"""
 
 
     
