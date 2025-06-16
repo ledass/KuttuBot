@@ -47,7 +47,14 @@ Filters allow users to set automated replies for specific keywords. Whenever a m
 
 <b>🔒 NOTE:</b>
 1. The bot must have <b>admin privileges</b> in the chat.  
-2. On
+2. Only <b>admins</b> can add or manage filters.  
+3. <b>Alert buttons</b> have a character limit of 64.
 
+<b>⚙️ Commands & Usage:</b>
+• <code>/filter</code> – Add a filter to the chat  
+• <code>/filters</code> – List all filters in the chat  
+• <code>/del</code> – Delete a specific filter  
+• <code>/delall</code> – Delete all filters (Chat Owner only)
+"""
 
 
