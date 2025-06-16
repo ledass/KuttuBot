@@ -8,9 +8,9 @@ class script(object):
 
 
     HELP_TXT = """
-"🙋🏻‍♂️ Hᴇʟʟᴏ {}! 🤓"
+🙋🏻‍♂️ Hᴇʟʟᴏ {}! 🤓
 
-"<blockquote>📌 Aᴠᴀɪʟᴀʙʟᴇ Cᴏᴍᴍᴀɴᴅs:</blockquote>"
+<blockquote>📌 Aᴠᴀɪʟᴀʙʟᴇ Cᴏᴍᴍᴀɴᴅs:</blockquote>
 
 🔹 /start – Check if I’m alive  
 🔹 /ping – Check bot response time  
