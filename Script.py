@@ -137,11 +137,16 @@ This module only works for my admins.
     RESULT_TXT = """<b>🎉 Yay! I dug through my database and found this for you:</b>
 <blockquote>{}</blockquote>"""
 
-    CUSTOM_FILE_CAPTION = """<b>📁 Fɪʟᴇ Nᴀᴍᴇ: 📄 <code>{file_name}</code>
+    CUSTOM_FILE_CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : <code>{file_name}</code>
 
-📦 Fɪʟᴇ Sɪᴢᴇ: 💾 <code>{file_size}</code>
+╔═════•✧❅✦❅✧•═════╗
+▣ <a href=https://t.me/+P_ni_6Ji_DAyMzQ1>[MC] 🔰MC മൂവിസ് 🔰</a>
+▣ <a href=https://t.me/+P_ni_6Ji_DAyMzQ1>[MC] 🔰MC മൂവിസ് 🔰</a>
+╚═════•✧❅✦❅✧•═════╝</b>"""
 
-🔗 [⚡ Jᴏɪɴ Eʟᴅᴏʀᴀᴅᴏ ⚡](https://t.me/+53lB8qzQaGFlNDll)</b>"""
+
+
+
     
     RESTART_GC_TXT = """
 <b>🔄 𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽!</b>
