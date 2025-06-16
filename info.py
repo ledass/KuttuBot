@@ -33,8 +33,8 @@ auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = [int(auth_channel) for auth_channel in environ.get('AUTH_CHANNEL', '').split() if id_pattern.search(auth_channel)]
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-FORCE_SUB1 = environ.get('FORCE_SUB1', 'https://t.me/+53lB8qzQaGFlNDll')
-FORCE_SUB2 = environ.get('FORCE_SUB2', 'https://t.me/wudixh12')
+FORCE_SUB1 = environ.get('FORCE_SUB1', 'https://t.me/+o9BxFE3e4awzOTY1')
+FORCE_SUB2 = environ.get('FORCE_SUB2', 'https://t.me/+AqKFCMI7DFxkYTVl')
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
