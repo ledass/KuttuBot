@@ -27,10 +27,13 @@ async def start(client, message: Message):
     # Group start
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
-            [InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')],
-            [InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')]
-        ]
+            [
+                InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/MC_Adminser_bot')
+            ],
+            [
+                InlineKeyboardButton('📚 ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help")
+            ]
+            ]
 
         reply_markup = InlineKeyboardMarkup(buttons)
 
@@ -84,12 +87,11 @@ async def start(client, message: Message):
         await loading_msg.delete()
 
         # Show main menu buttons
-        buttons = [
-            [InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')],
-            [InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')],
-            [InlineKeyboardButton('© Dᴍᴄᴀ', callback_data='dmca')]
-        ]
+        buttons = [[
+            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('🎗️ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs 🎗️', callback_data='help')
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
 
         await message.reply_photo(
@@ -134,12 +136,11 @@ async def start(client, message: Message):
         await authdel.delete()
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons = [
-            [InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')],
-            [InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')],
-            [InlineKeyboardButton('© Dᴍᴄᴀ', callback_data='dmca')]
-        ]
+        buttons = [[
+            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('🎗️ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs 🎗️', callback_data='help')
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
