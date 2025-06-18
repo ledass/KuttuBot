@@ -410,47 +410,91 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
-            ],[
-            InlineKeyboardButton('© Dᴍᴄᴀ', callback_data='dmca')
-        ]]
+            InlineKeyboardButton('⚡ ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ⚡', callback_data='help')
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )
+       )
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('Mᴀɴᴜᴀʟ FIʟᴛᴇʀ', callback_data='manuelfilter'),
-            InlineKeyboardButton('Aᴜᴛᴏ FIʟᴛᴇʀ', callback_data='autofilter')
-        ], [
-            InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
-            InlineKeyboardButton('ᴇxᴛʀᴀ ᴍᴏᴅꜱ', callback_data='extra')
-        ], [
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='start'),
-            InlineKeyboardButton('🔮 ꜱᴛᴀᴛᴜꜱ', callback_data='stats')
+            InlineKeyboardButton('👑 ᴏᴡɴᴇʀ', callback_data='onwer'),
+            InlineKeyboardButton('👼 ᴄᴏ - ∂єν ᴺᵒᵒᵇ', callback_data='about')
+            ],[
+            InlineKeyboardButton('👥 ɢʀᴏᴜᴘ', url='https://t.me/+3SrhYvCpBF80MDll'),
+            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+3SrhYvCpBF80MDll')
+            ],[
+            InlineKeyboardButton('🔐 ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏꜱᴇ ʙᴜᴛᴛᴏɴꜱ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
         await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
+            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+       )
+
+    elif query.data == "onwer":
+        buttons = [[
+            InlineKeyboardButton('🛰️ ʀᴇɴᴅᴇʀɪɴɢ ꜱᴛᴀᴛᴜꜱ ☁️',callback_data='rendr')
+            ],[
+            InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ', callback_data='ajtgpm'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto("https://te.legra.ph/file/8c9c21bc754f052bee8a4.jpg")
+        )
+        await query.message.edit_text(
+            text=script.OWNER_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+        
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='gtheroabout'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto("https://te.legra.ph/file/8c9c21bc754f052bee8a4.jpg")
+        )
         await query.message.edit_text(
-            text=script.ABOUT_TXT.format(temp.B_NAME),
+            text=script.ABOUT_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+
+    elif query.data == "gtheroabout":
+        await query.answer("⛥ηαмє : ᵐʳ𝐔𝐧𝐤𝐧𝐨𝐰𝐧🎭\n\n⛥ρℓα¢є : THRISSUR\n\n⛥ѕкιℓℓѕ : ᴄᴏᴅᴇ ᴇᴅɪᴛɪɴɢ\n\n⛥¢αт¢н мє νια : @MC_Adminser_bot", show_alert=True)
+
+    elif query.data == "ajtgpm":
+        await query.answer("📵 ᴄᴏɴᴛᴀᴄᴛ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ\n\n- ꜱᴇᴄᴛɪᴏɴ B206 - ꜱᴘᴀᴍ + ʙᴀɴ ⚠️\n\n- ꜱᴇᴄᴛɪᴏɴ Y8R6 - ꜱᴘᴀᴍ + ʀᴇᴘᴏʀᴛ 🉐\n\n🗽 ʙʏ ◉‿◉ MC ", show_alert=True)
+
+    elif query.data == "rendr":
+        await query.answer("⚡️ʟɪᴠᴇ sʏsᴛᴇᴍ sᴛᴀᴛᴜs ⚡️\n\n❂ ʀᴀᴍ ●●●●●●●◌◌◌\n✇ ᴄᴘᴜ ●●●●●●●◌◌◌\n✪ ᴅᴀᴛᴀ ᴛʀᴀꜰɪᴄs ●●●●◌◌◌◌◌◌ 🛰\n\nᴠ2.7.1 [sᴛᴀʙʟᴇ] """, show_alert=True)
+
+    elif query.data == "close_data": 
+        await query.message.delete()
+        try:
+            await query.message.reply_to_message.delete()
+        except:
+            pass
+            
     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='about')
